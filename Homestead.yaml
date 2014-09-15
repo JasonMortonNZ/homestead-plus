@@ -1,0 +1,35 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+hostname: "homestead"
+
+authorize: ~/.ssh/id_rsa.1.pub
+
+keys:
+    - ~/.ssh/id_rsa.1
+
+folders:
+    - map: /Users/Jason/Development/Tectonic/Shift-2
+      to: /home/vagrant/shift-2
+
+sites:
+    - map: shift-2.app
+      to: /home/vagrant/shift-2/public
+
+variables:
+    - key: APP_ENV
+      value: local
+
+databases:
+    postgresql:
+        -
+    mysql:
+        - testing_123
+
+commands:
+    - sudo apt-get update
+    - sudo apt-get -y dist-upgrade
+    - sudo locale-gen en_NZ.UTF-8
+    - composer self-update
+    - sudo npm update -g
