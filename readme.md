@@ -24,12 +24,12 @@ The installation process is almost identical to the Laravel homestead setup.
 
 4. Customise the `Homestead.yaml` file to your liking and they run `vagrant up`
 
-**Note: Don't forget to add each new site in your `Homestead.yaml` file to your hosts file.
+**Note:** Don't forget to add each new site in your `Homestead.yaml` file to your hosts file.
 
 E.g.:
 
-** *nix & OSX** - edit your `/etc/hosts` file and add `127.0.0.1  project.app`
-** Windows** - edit your `C:\Windows\System32\drivers\etc\hosts` file and add `127.0.0.1  project.app`
+**Linux & OSX** - edit your `/etc/hosts` file and add `127.0.0.1  project.app`
+**Windows** - edit your `C:\Windows\System32\drivers\etc\hosts` file and add `127.0.0.1  project.app`
 
 # Customisation
 
