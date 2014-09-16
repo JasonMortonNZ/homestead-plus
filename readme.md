@@ -1,4 +1,4 @@
-# Homestead Plus (based on Laravel Homestead)
+# Homestead Plus
 
 Homestead Plus - builds upon the base Laravel Homestead setup, by adding additional features such as:
 

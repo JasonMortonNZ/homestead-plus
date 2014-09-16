@@ -16,12 +16,12 @@ class Homestead
     end
 
     # Configure Port Forwarding To The Box
-    config.vm.network "forwarded_port", guest: 80, host: 8000     # HTTP
-    config.vm.network "forwarded_port", guest: 443, host: 44300   # SSL
-    config.vm.network "forwarded_port", guest: 3306, host: 33060  # MySQL
-    config.vm.network "forwarded_port", guest: 5432, host: 54320  # PostgreSQL
-    config.vm.network "forwarded_port", guest: 6379, host: 63790  # Redis
-    config.vm.network "forwarded_port", guest: 11211, host: 11212 # Memcached
+    config.vm.network "forwarded_port", guest: 80, host: settings["ports"]["http"]
+    config.vm.network "forwarded_port", guest: 443, host: settings["ports"]["ssl"]
+    config.vm.network "forwarded_port", guest: 3306, host: settings["ports"]["mysql"]
+    config.vm.network "forwarded_port", guest: 5432, host: settings["ports"]["postgresql"]
+    config.vm.network "forwarded_port", guest: 6379, host: settings["ports"]["redis"]
+    config.vm.network "forwarded_port", guest: 11211, host: settings["ports"]["memcached"]
 
     # Configure The Public Key For SSH Access
     config.vm.provision "shell" do |s|

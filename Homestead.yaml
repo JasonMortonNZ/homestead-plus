@@ -2,20 +2,28 @@
 ip: "192.168.10.10"
 memory: 2048
 cpus: 1
-hostname: "homestead"
+hostname: "homestead-plus"
 
-authorize: ~/.ssh/id_rsa.1.pub
+ports:
+    http: 8000
+    ssl: 44300
+    mysql: 33060
+    postgresql: 54320
+    redis: 63790
+    memcached: 11212
+
+authorize: ~/.ssh/id_rsa.pub
 
 keys:
-    - ~/.ssh/id_rsa.1
+    - ~/.ssh/id_rsa
 
 folders:
-    - map: /Users/Jason/Development/Tectonic/Shift-2
-      to: /home/vagrant/shift-2
+    - map: /Users/Code/Project
+      to: /home/vagrant/code/project
 
 sites:
-    - map: shift-2.app
-      to: /home/vagrant/shift-2/public
+    - map: project.app
+      to: /home/vagrant/project/public
 
 variables:
     - key: APP_ENV
